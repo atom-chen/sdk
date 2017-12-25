@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/dcn_lottery_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dcn_lottery_bg_style_ver_1">
+
+    <ImageView
+        android:id="@+id/dcn_lottery_wheel_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dcn_lottery_back"/>
+
+    <ImageView
+        android:id="@+id/dcn_lottery_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dcn_lottery_banner_style_ver_1"/>
+
+    <!-- 抽奖转盘 -->
+    <RelativeLayout
+        android:id="@+id/dcn_lottery_wheel_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/dcn_lottery_wheel_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+            <com.downjoy.widget.LotteryWheelDisc
+                android:id="@+id/dcn_lottery_wheel_disc"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+            <com.downjoy.widget.LotteryWheelLeaf
+                android:id="@+id/dcn_lottery_wheel_leaf"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/dcn_lottery_wheel_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:src="@drawable/dcn_lottery_wheel_start"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 抽奖次数 -->
+    <TextView
+        android:id="@+id/dcn_lottery_counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/dcn_selector_lottery_btn"
+        android:paddingBottom="5dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/dcn_white"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <!-- 抽奖结果 -->
+    <com.downjoy.widget.LotteryResult
+        android:id="@+id/dcn_lottery_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"/>
+
+    <include
+        android:id="@+id/dcn_lottery_other"
+        layout="@layout/dcn_lottery_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"/>
+
+</FrameLayout>

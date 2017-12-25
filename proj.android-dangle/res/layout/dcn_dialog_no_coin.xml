@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="@dimen/dcn_dialog_common_width"
+              android:layout_height="@dimen/dcn_dialog_common_height"
+              android:background="@drawable/dcn_shape_dialog_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/dcn_dialog_common_titlebar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/dcn_lottery_no_rewards"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/dcn_lottery_no_coin_title"
+                android:textColor="#48494A"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#f0f0f0"/>
+
+            <TextView
+                android:id="@+id/dcn_lottery_content_shopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/dcn_lottery_no_coin_content1"
+                android:textColor="#48494A"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/dcn_lottery_content_mission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/dcn_lottery_no_coin_content2"
+                android:textColor="#48494A"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="@dimen/dcn_dialog_common_width"
+              android:layout_height="@dimen/dcn_dialog_common_height"
+              android:background="@drawable/dcn_shape_dialog_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/dcn_dialog_common_titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dcn_dialog_common_interval"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/dcn_dialog_common_interval"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dcn_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="5dp"
+                android:text="content"
+                android:textColor="#999"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

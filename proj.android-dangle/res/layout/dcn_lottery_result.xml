@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 未中 -->
+    <RelativeLayout
+        android:id="@+id/dcn_lottery_no_rewards_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/dcn_lottery_no_rewards_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/dcn_lottery_no_rewards"/>
+
+        <TextView
+            android:id="@+id/dcn_lottery_no_rewards_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dcn_lottery_no_rewards_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/dcn_lottery_result_no_rewards"
+            android:textColor="#c35805"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_no_rewards_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dcn_lottery_no_rewards_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/dcn_lottery_try_again"/>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_no_rewards_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/dcn_lottery_no_rewards_img"
+            android:src="@drawable/dcn_lottery_close"/>
+    </RelativeLayout>
+
+    <!-- 兑奖成功 -->
+    <LinearLayout
+        android:id="@+id/dcn_lottery_exchange_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/dcn_lottery_exchange"/>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_exchange_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/dcn_lottery_continue"/>
+    </LinearLayout>
+
+    <!-- 领取奖励 -->
+    <RelativeLayout
+        android:id="@+id/dcn_lottery_win_rewards_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/dcn_lottery_win_rewards_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/dcn_lottery_win_rewards">
+
+            <com.downjoy.android.volley.toolbox.NetworkImageView
+                android:id="@+id/dcn_lottery_win_rewards_img"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_get_rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dcn_lottery_win_rewards_frame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/dcn_lottery_get_rewards"/>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_get_rewards_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/dcn_lottery_win_rewards_frame"
+            android:src="@drawable/dcn_lottery_close"/>
+
+    </RelativeLayout>
+
+    <!-- 出错 -->
+    <RelativeLayout
+        android:id="@+id/dcn_lottery_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/dcn_lottery_error_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/dcn_lottery_no_rewards"/>
+
+        <TextView
+            android:id="@+id/dcn_lottery_error_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dcn_lottery_error_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/dcn_lottery_result_error_title"
+            android:textColor="#c35805"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_error_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dcn_lottery_error_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/dcn_lottery_error_try_again"/>
+
+        <ImageView
+            android:id="@+id/dcn_lottery_error_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/dcn_lottery_error_img"
+            android:src="@drawable/dcn_lottery_close"/>
+    </RelativeLayout>
+
+</RelativeLayout>
