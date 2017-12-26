@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical" 
+    android:id="@+id/root"
+    tools:context=".MainActivitySDK" >
+    
+     <TextView 
+        android:id="@+id/tv1"        
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="用户登录成功跳到模拟游戏的主页面|断开连接"
+        android:background="#6600ee00" 
+        android:textSize="20sp"
+        android:layout_gravity="center"  
+        android:clickable="true"      
+       />
+  
+    <TextView
+        android:layout_marginTop="20dip"
+        android:id="@+id/tv2"      
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="跳到sdk的个人中心|重新连接"
+        android:background="#668800ff" 
+        android:textSize="30sp"
+        android:layout_gravity="center"   
+        android:clickable="true"    
+       />
+    <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="50dip"
+         android:orientation="horizontal"
+         android:layout_marginTop="20dip"
+        >
+     <TextView
+        android:id="@+id/xiaofei"      
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:text="玩家购买道具，调sdk的消费接口,动态填写价格便于测试"
+        android:background="#66ff0000" 
+        android:textSize="13sp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_weight="1"
+       />
+      <EditText
+        android:id="@+id/xiaofei_et"      
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:text="1"
+        android:background="#ffffff" 
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginLeft="50dip"
+        android:layout_weight="1"
+       />
+    </LinearLayout> 
+     
+      <TextView
+        android:layout_marginTop="20dip"
+        android:id="@+id/logout"      
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="请在游戏登录成功之后，在调登出接口"
+        android:background="#66ff0000" 
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:clickable="true"
+       />
+      
+       <TextView
+        android:layout_marginTop="20dip"
+        android:id="@+id/xuan"      
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="产生悬浮框"
+        android:background="#66ff0000" 
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:visibility="gone"
+       />
+       
+      
+       
+
+</LinearLayout>
