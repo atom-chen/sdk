@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      package="com.aw.nlmyx.mzw"
+      android:versionCode="2"
+      android:versionName="2.7"
+      android:installLocation="auto">
+
+     <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+    <uses-feature android:glEsVersion="0x00020000" />
+
+    <application
+        tools:replace="android:label"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppSplash">
+
+					 
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data android:name="android.app.lib_name"
+                  android:value="cocos2dlua" />
+					  
+        <activity android:name="org.cocos2dx.lua.AppActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="keyboardHidden|navigation|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 插件的代理器，使用框架必须声明 -->
+        <activity
+            android:name="com.muzhiwan.plugin.LActivityProxy"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <service android:name="com.muzhiwan.plugin.service.LProxyService" />
+
+        <meta-data
+            android:name="mzw_sdk"
+            android:value="3380" />
+        <meta-data
+            android:name="MZWAPPKEY"
+            android:value="9da3071699a5a2d336a675b391d12f18" />
+        <meta-data
+            android:name="mzw_channel"
+            android:value="mzw" />
+        <meta-data
+            android:name="mzw_cps"
+            android:value="mzw" />
+        <meta-data
+            android:name="DEBUG"
+            android:value="false" />
+        <activity
+            android:name="com.example.mzw_olsdk_test.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask" />
+        <!-- 全面屏 -->
+        <meta-data android:name="android.max_aspect"
+            android:value="2.1"/>
+    </application>
+
+    <supports-screens android:anyDensity="true"
+                      android:smallScreens="true"
+                      android:normalScreens="true"
+                      android:largeScreens="true"
+                      android:xlargeScreens="true"/>
+    <!-- 手机型号 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+</manifest> 
